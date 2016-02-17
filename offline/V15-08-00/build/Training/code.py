@@ -11,7 +11,9 @@ def MyModule(frame):
     i3geo = frame['I3Geometry']
     pos = i3geo.omgeo[icetray.OMKey(1,1,0)]
     xpos,ypos,zpos = pos.position.x, pos.position.y, pos.position.z
+    print xpos
     frame['xPos'], frame['yPos'], frame['zPos'] = dataclasses.I3Double(xpos),dataclasses.I3Double(ypos),dataclasses.I3Double(zpos)
+    return True
 
 tray.AddModule(MyModule,"mijnModule", Streams=[icetray.I3Frame.Geometry])
 
