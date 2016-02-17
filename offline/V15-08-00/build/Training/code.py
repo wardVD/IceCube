@@ -7,6 +7,8 @@ gcdfile = "./GeoCalibDetectorStatus_2012.56063_V1_OctSnow.i3.gz"
 
 tray.AddModule("I3Reader","reader",Filename=gcdfile)   #Use icetray-inspect
 
+#test
+
 def MyModule(frame):
     i3geo = frame['I3Geometry']
     pos = i3geo.omgeo[icetray.OMKey(1,1,0)]
